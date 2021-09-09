@@ -2,9 +2,9 @@
 #include<stdint.h>
 #include<netinet/in.h>
 
-int main(int argv, char **argc){
-    FILE *f1 = fopen(argc[1], "rb"); 
-    FILE *f2 = fopen(argc[2], "rb");
+int main(int argc, char **argv){
+    FILE *f1 = fopen(argv[1], "rb"); 
+    FILE *f2 = fopen(argv[2], "rb");
 
     uint32_t int1, int2;
     fread(&int1, sizeof(uint32_t), 1, f1);
